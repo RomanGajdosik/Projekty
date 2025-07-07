@@ -1,2 +1,13 @@
-<!DOCTYPE html>
-</html>
+{% extends "base.html" %}
+{% block title %}Nová Poznámka{% endblock %}
+
+{% block content %}
+<h2>Pridaj poznámku</h2>
+<form method="post">
+    <label for="title"><h3>Názov:</h3></label>
+    <input type="text" id="title" name="title" required><br>
+    <label for="content"><h3>Obsah:</h3></label>
+    <textarea id="content" name="content" rows="4" cols="40" required></textarea><br>
+    <button type="submit">Pridať</button>
+</form>
+{% endblock %}

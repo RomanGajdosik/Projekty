@@ -1,2 +1,21 @@
 <!DOCTYPE html>
+<html lang="en,sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header><h1>Poznámkový blok</h1></header>
+    <nav>
+        <ul>
+            <li><a href="/">Zoznam poznámok</a></li>
+            <li><a href="/add_note">Pridaj poznámku</a></li>
+        </ul>
+    </nav>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
 </html>

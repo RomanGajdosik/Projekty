@@ -1,2 +1,17 @@
-<!DOCTYPE html>
-</html>
+{% extends "base.html" %}
+
+{% block title %}Poznámky{% endblock %}
+
+{% block content %}
+    <h2>Zoznam poznámok</h2>
+    <main>
+        <ul>
+            {% for note in notes %}
+            <li>
+                <strong>{{ note.title }}</strong><br>
+                {{ note.content }}
+            </li>
+            {% endfor %}
+        </ul>
+    </main>
+{% endblock %}
